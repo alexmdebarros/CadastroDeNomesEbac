@@ -76,7 +76,7 @@ int cadastro()//função responsável por cadastrar os usuários no sistema
     
     sleep(2);//faz a tela parar por 2 segundos antes de retornar ao menu principal
     
-    
+
 }
 
 int consulta()
@@ -204,7 +204,10 @@ int main ()
 				break;
 				
 			case 4: //sai do sistema caso o usuario selecione a opção 4
-				printf("Obrigado por usar o programa!\n");
+			printf(" __________________________\n");
+			printf("|                          |\n");
+			printf("|  Obrigado e até breve!   |\n");
+			printf("|__________________________|\n\n\n");
 				return 0;
 				break;	
 				
