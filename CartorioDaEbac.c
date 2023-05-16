@@ -178,7 +178,7 @@ int main ()
 		printf("|  1-Cadastrar Nomes:      |\n");
 		printf("|  2-Consultar Nomes:      |\n");
 		printf("|  3-Excluir Nomes:        |\n");
-		printf("|                          |\n");
+		printf("|  4-Sair do sistema:      |\n");
 		printf("|__________________________|\n\n\n");
 		
 		
@@ -202,6 +202,11 @@ int main ()
 			case 3: //caso o usuario digite 1 motrará a tela excluir nomes
 				excluir();				
 				break;
+				
+			case 4: //sai do sistema caso o usuario selecione a opção 4
+				printf("Obrigado por usar o programa!\n");
+				return 0;
+				break;	
 				
 			default: //se o usuário digitar qualquer numero ou caractere fora do "padrao" mostrará tela inválida
 				
