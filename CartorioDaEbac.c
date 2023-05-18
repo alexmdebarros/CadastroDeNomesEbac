@@ -151,7 +151,9 @@ int main ()
 	
 	int opcao=0; //variábvel do tipo inteiro que irá armazenar a opção do usuário
 	int laco=1;
+	char senha[10]="a";
 	
+		
 	// exibe a tela de boas vindas
     printf(" __________________________\n");
     printf("|                          |\n");
@@ -160,70 +162,84 @@ int main ()
     printf("|       Bem Vindo(a)!      |\n");
     printf("|__________________________|\n\n");
     
-    sleep(1.5); //faz a tela parar por 1.5 segundos ou o tempo que definirmos entre ()
+    printf("Digite sua senha: ");
+    scanf("%s", senha);
+    
+    if (strcmp(senha, "admin")==0)
+    {
 	
-	for(laco=1; laco=1;)
-	{
-		system("cls");//limpa a tela
-		
-			
-		/*printf responável por exibir na tela para o usuário
-		cada \n - pula uma linha, cada \t - faz com que a linha de um espaço antes coo um "tab"
-		por questão estética decidi não usar o \t para fazer uma espécie de "layout" estilo moldura*/
-						
-		printf(" __________________________\n");
-		printf("|                          |\n");
-		printf("| ### Cartório da EBAC ### |\n");
-		printf("|                          |\n");
-		printf("|  1-Cadastrar Nomes:      |\n");
-		printf("|  2-Consultar Nomes:      |\n");
-		printf("|  3-Excluir Nomes:        |\n");
-		printf("|  4-Sair do sistema:      |\n");
-		printf("|__________________________|\n\n\n");
-		
-		
-		//scanf serve com input do usuario
-		printf("Digite a opão desejada: ");
-		
-		scanf("%d", &opcao); //%d serve para indormar que irá armazenar uma variavel do tipo inteiro em &opcao
-		
-		system("cls");  //limpa a tela após o usuario digitar a opção desejada
-		
-		switch(opcao)
+	
+		for(laco=1; laco=1;)
 		{
-			case 1: //caso o usuario digite 1 chama a função cadastro
-				cadastro();				
-				break;
+			system("cls");//limpa a tela
+			
 				
-			case 2: //caso o usuario digite 2 chama a função consulta
-				consulta();				
-				break;
-				
-			case 3: //caso o usuario digite 1 motrará a tela excluir nomes
-				excluir();				
-				break;
-				
-			case 4: //sai do sistema caso o usuario selecione a opção 4
+			/*printf responável por exibir na tela para o usuário
+			cada \n - pula uma linha, cada \t - faz com que a linha de um espaço antes coo um "tab"
+			por questão estética decidi não usar o \t para fazer uma espécie de "layout" estilo moldura*/
+							
 			printf(" __________________________\n");
 			printf("|                          |\n");
-			printf("|  Obrigado e até breve!   |\n");
+			printf("| ### Cartório da EBAC ### |\n");
+			printf("|                          |\n");
+			printf("|  1-Cadastrar Nomes:      |\n");
+			printf("|  2-Consultar Nomes:      |\n");
+			printf("|  3-Excluir Nomes:        |\n");
+			printf("|  4-Sair do sistema:      |\n");
 			printf("|__________________________|\n\n\n");
-				return 0;
-				break;	
-				
-			default: //se o usuário digitar qualquer numero ou caractere fora do "padrao" mostrará tela inválida
-				
-				printf(" ____________________________\n");
-				printf("|                            |\n");
-				printf("|   ### Opção inválida! ###  |\n");
-				printf("| Escolha as opções de 1 a 3 |\n");
-				printf("|____________________________|\n\n\n");
-				
-				system("pause");
-				break;			
+			
+			
+			//scanf serve com input do usuario
+			printf("Digite a opão desejada: ");
+			
+			scanf("%d", &opcao); //%d serve para indormar que irá armazenar uma variavel do tipo inteiro em &opcao
+			
+			system("cls");  //limpa a tela após o usuario digitar a opção desejada
+			
+			switch(opcao)
+			{
+				case 1: //caso o usuario digite 1 chama a função cadastro
+					cadastro();				
+					break;
+					
+				case 2: //caso o usuario digite 2 chama a função consulta
+					consulta();				
+					break;
+					
+				case 3: //caso o usuario digite 1 motrará a tela excluir nomes
+					excluir();				
+					break;
+					
+				case 4: //sai do sistema caso o usuario selecione a opção 4
+				printf(" __________________________\n");
+				printf("|                          |\n");
+				printf("|  Obrigado e até breve!   |\n");
+				printf("|__________________________|\n\n\n");
+					return 0;
+					break;	
+					
+				default: //se o usuário digitar qualquer numero ou caractere fora do "padrao" mostrará tela inválida
+					
+					printf(" ____________________________\n");
+					printf("|                            |\n");
+					printf("|   ### Opção inválida! ###  |\n");
+					printf("| Escolha as opções de 1 a 3 |\n");
+					printf("|____________________________|\n\n\n");
+					
+					system("pause");
+					break;			
+			}
+			
 		}
-		
 	}
+	
+	else
+	
+	printf(" __________________________\n");
+	printf("|                          |\n");
+	printf("| ### Senha inválida! ###  |\n");
+	printf("|__________________________|\n\n\n");
+	
 }
 
 
